@@ -15,8 +15,9 @@ var makeCoffee = function (person) {
   person();
   if(day === 0 && todaysVictim === "Landy"){
     console.log("Landy was picked");
-    while(todaysVictim === "Landy" && day === 0)
-    return pickRandom();
+    while(todaysVictim === "Landy" && day === 0){
+      return pickRandom();
+    }
   }
   else {
     console.log("else");
