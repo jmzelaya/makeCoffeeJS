@@ -3,6 +3,9 @@ var victims = ["Erick", "Andres", "John", "Abdala", "Landy", "Manny"];
 var date = new Date();
 var day = date.getDay();
 
+var date = new Date();
+var day = date.getDay();
+
 
 var todaysVictim;
 
@@ -14,10 +17,11 @@ var pickRandom = function (){
 var makeCoffee = function (person) {
   person();
   if(day === 0 && todaysVictim === "Landy"){
-    console.log("Landy was picked");
-    while(todaysVictim === "Landy" && day === 0){
-      return pickRandom();
+    while(todaysVictim == "Landy"){
+      console.log("Landy was picked");
+      pickRandom();
     }
+    return todaysVictim;
   }
   else {
     console.log("else");
