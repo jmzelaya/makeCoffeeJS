@@ -31,3 +31,9 @@ var makeCoffee = function (person) {
 };
 
 makeCoffee(pickRandom);
+
+$(document).ready(function() {
+  $('.btn-pick').click(function(){
+    $('h1').text(makeCoffee(pickRandom));
+  });
+});
