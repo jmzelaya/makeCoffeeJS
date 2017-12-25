@@ -1,0 +1,17 @@
+.wrapper{
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper h1{
+  text-align: center;
+}
+
+.wrapper button{
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
