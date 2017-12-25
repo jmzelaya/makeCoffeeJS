@@ -37,3 +37,8 @@ $(document).ready(function() {
     $('h1').text(makeCoffee(pickRandom));
   });
 });
+
+
+//John on Tuesday
+//Abdala on Monday, Tuesday, OR Thursday
+//If Sat or Sun do something funny
