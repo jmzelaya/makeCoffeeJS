@@ -16,13 +16,30 @@ var pickRandom = function (){
 
 var makeCoffee = function (person) {
   person();
-  if(day === 0 && todaysVictim === "Landy"){
-    while(todaysVictim == "Landy"){
-      console.log("Landy was picked");
+  if(day === 1 && todaysVictim === "Abdala"){
+    while(todaysVictim == "Abdala"){
+      console.log("Abdala was picked");
       pickRandom();
     }
     return todaysVictim;
   }
+
+  else if (day === 2 && todaysVictim === "Abdala" || todaysVictim === "John") {
+    while(todaysVictim == "Abdala"){
+      console.log("Abdala was picked");
+      pickRandom();
+    }
+    return todaysVictim;
+  }
+
+  else if(day === 4 && todaysVictim === "Abdala") {
+      while(todaysVictim == "Abdala"){
+        console.log("Abdala was picked");
+        pickRandom();
+      }
+    return todaysVictim;
+  }
+
   else {
     console.log("else");
     return todaysVictim;
