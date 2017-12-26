@@ -10,6 +10,11 @@
   font-size: 40px;
 }
 
+.wrapper h2{
+  text-align: center;
+  font-size: 28px;
+}
+
 .wrapper button{
   text-align: center;
   margin: 0 auto;
