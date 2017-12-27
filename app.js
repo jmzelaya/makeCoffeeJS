@@ -24,7 +24,7 @@ var makeCoffee = function (person) {
     return todaysVictim;
   }
 
-  else if (day === 2 && todaysVictim === "Abdala" || todaysVictim === "John") {
+  else if (day === 2 && todaysVictim === "Abdala" || day === 2 && todaysVictim === "John") {
     while(todaysVictim == "Abdala" || todaysVictim == "John"){
       console.log("Abdala or John was picked");
       pickRandom();
