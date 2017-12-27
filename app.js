@@ -47,8 +47,6 @@ var makeCoffee = function (person) {
 
 };
 
-makeCoffee(pickRandom);
-
 $(document).ready(function() {
   $('.btn-pick').click(function(){
     $('h2').text(makeCoffee(pickRandom));
