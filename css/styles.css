@@ -13,6 +13,8 @@
 .wrapper h2{
   text-align: center;
   font-size: 28px;
+  color: palegreen;
+  text-transform: uppercase;
 }
 
 .wrapper button{

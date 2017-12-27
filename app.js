@@ -52,7 +52,9 @@ makeCoffee(pickRandom);
 $(document).ready(function() {
   $('.btn-pick').click(function(){
     $('h2').text(makeCoffee(pickRandom));
-    $('h2').toggleClass('tada');
+    $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
+      $('h2').removeClass('tada');
+    });
   });
 });
 
