@@ -1,6 +1,16 @@
+* {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
 body{
   font-family: 'Lobster', cursive;
-  background-image: url(../images/coffeeBean.jpg);
+  background: url(../images/coffeeBean.jpg)center -50% no-repeat;
   background-size: 100%;
 }
 
@@ -26,8 +36,17 @@ body{
   text-align: center;
   margin: 0 auto;
   display: block;
-  padding: 15px;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
   width: 130px;
-  border-radius: 5px;
-  font-size: 19px;
+  border-radius: 15px;
+  font-size: 20px;
+  border-width: 2px;
+  color: slategrey;
+}
+
+.wrapper button:hover{
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2)inset;
 }
