@@ -29,7 +29,9 @@ body{
 .wrapper h2{
   text-align: center;
   font-size: 45px;
-  color: palegreen;
+  background: -webkit-linear-gradient(#eee, #5E432F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .wrapper button{
