@@ -3,10 +3,6 @@ var victims = ["Erick", "Andres", "John", "Abdala", "Landy", "Manny"];
 var date = new Date();
 var day = date.getDay();
 
-var date = new Date();
-var day = date.getDay();
-
-
 var todaysVictim;
 
 var pickRandom = function (){
