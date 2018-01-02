@@ -51,6 +51,3 @@ $(document).ready(function() {
     });
   });
 });
-
-
-//If Sat or Sun do something funny
