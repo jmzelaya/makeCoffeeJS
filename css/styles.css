@@ -30,7 +30,7 @@ body{
 .wrapper h2{
   text-align: center;
   font-size: 45px;
-  background: -webkit-linear-gradient(#eee, #5E432F);
+  background: -webkit-linear-gradient(#A15923, #190803);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
