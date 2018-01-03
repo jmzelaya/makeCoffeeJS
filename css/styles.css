@@ -16,6 +16,7 @@ body {
 }
 
 body{
+  margin: 0px;
   font-family: 'Lobster', cursive;
   background: url(../images/coffeeBean.jpg)center bottom no-repeat;
   background-size: 100%;
