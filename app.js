@@ -66,16 +66,16 @@ var makeCoffee = function (person) {
 };
 
 $(document).ready(function() {
-  var webhook = "https://hooks.slack.com/services/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";
-  var text = "Test";
+  var url = "https://hooks.slack.com/services/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";
+  var text = "Testing";
   $.ajax({
-    data: 'payload=' + JSON.stringify({
-        "text": text
-    }),
-    dataType: 'json',
-    processData: false,
-    type: 'POST',
-    url: webhook
+      data: 'payload=' + JSON.stringify({
+          "text": text
+      }),
+      dataType: 'json',
+      processData: false,
+      type: 'POST',
+      url: url
   });
   $('.btn-pick').click(function(){
     $('h2').text(makeCoffee(pickRandom));
