@@ -67,7 +67,7 @@ var makeCoffee = function (person) {
 
 $(document).ready(function() {
   var url = "https://hooks.slack.com/services/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";
-  var text = todaysVictim;
+  var text = "Test";
   $.ajax({
     data: 'payload=' + JSON.stringify({
         "text": text
