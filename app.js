@@ -66,7 +66,7 @@ var makeCoffee = function (person) {
 };
 
 $(document).ready(function() {
-  var url = "https://hooks.slack.com/services/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";
+  var webhook = "https://hooks.slack.com/services/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";
   var text = "Test";
   $.ajax({
     data: 'payload=' + JSON.stringify({
@@ -75,7 +75,7 @@ $(document).ready(function() {
     dataType: 'json',
     processData: false,
     type: 'POST',
-    url: url
+    url: webhook
   });
   $('.btn-pick').click(function(){
     $('h2').text(makeCoffee(pickRandom));
