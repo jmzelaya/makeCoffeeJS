@@ -67,7 +67,7 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
-  var text = todaysVictim;
+  var text = "test";
   $('.btn-pick').click(function(){
     $('h2').text(makeCoffee(pickRandom));
     $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
