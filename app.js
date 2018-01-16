@@ -61,13 +61,27 @@ var makeCoffee = function (person) {
     return todaysVictim;
   }
 
+
+
 };
 
 $(document).ready(function() {
+  var url = "https://hooks.slack.com/services/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";
+  var text = todaysVictim;
+  $.ajax({
+    data: 'payload=' + JSON.stringify({
+        "text": text
+    }),
+    dataType: 'json',
+    processData: false,
+    type: 'POST',
+    url: url
+  });
   $('.btn-pick').click(function(){
     $('h2').text(makeCoffee(pickRandom));
     $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
       $('h2').removeClass('tada');
     });
   });
+
 });
