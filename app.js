@@ -65,6 +65,8 @@ $(document).ready(function() {
 
   };
 
+  makeCoffee(pickRandom);
+
 
   var url = "https://hooks.slack.com/services/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";
   var text = todaysVictim;
@@ -80,11 +82,11 @@ $(document).ready(function() {
       });
   };
   $('.btn-pick').click(function(){
-    $('h2').text(makeCoffee(pickRandom));
-    ajaxReq();
+    $('h2').text(todaysVictim);
     $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
       $('h2').removeClass('tada');
     });
+    ajaxReq();
   });
 
 });
