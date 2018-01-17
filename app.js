@@ -67,18 +67,21 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
-  var text = "Why u no work?!";
-  $.ajax({
-      data: 'payload=' + JSON.stringify({
-          "text": text
-      }),
-      dataType: 'json',
-      processData: false,
-      type: 'POST',
-      url: url
-  });
+  var text = "Test message for Slack";
+  var ajaxReq = function () {
+      $.ajax({
+          data: 'payload=' + JSON.stringify({
+              "text": text
+          }),
+          dataType: 'json',
+          processData: false,
+          type: 'POST',
+          url: url
+      });
+  };
   $('.btn-pick').click(function(){
     $('h2').text(makeCoffee(pickRandom));
+    ajaxReq();
     $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
       $('h2').removeClass('tada');
     });
