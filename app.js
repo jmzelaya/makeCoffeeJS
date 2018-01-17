@@ -65,6 +65,7 @@ $(document).ready(function() {
 
   };
 
+  //Call the function
   makeCoffee(pickRandom);
 
 
@@ -81,11 +82,16 @@ $(document).ready(function() {
           url: url
       });
   };
+
+  //When the button gets clicked...
   $('.btn-pick').click(function(){
+    //Update the h2 with the var
     $('h2').text(todaysVictim);
+    //Add the animation and do it EVERY time the button is clicked
     $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
       $('h2').removeClass('tada');
     });
+    //Call the AJAX and send :)
     ajaxReq();
   });
 
