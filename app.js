@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var victims = ["Erick", "Andres", "John", "Abdala", "Landy", "Manny"];
+  var victims = ["Erick", "John", "Abdala", "Landy", "Manny"];
 
   //Create a new Date object
   var date = new Date();
@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
-  var text = "☕️ Time for " + todaysVictim + " to make coffee. TATA TATATATA TATA👏🏽";
+  var text = "☕️ Time for " + todaysVictim + " to make coffee. 👏🏽TATA TATATATA TATA👏🏽";
   var ajaxReq = function () {
       $.ajax({
           data: 'payload=' + JSON.stringify({
