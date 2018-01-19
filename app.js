@@ -69,7 +69,7 @@ $(document).ready(function() {
   // makeCoffee(pickRandom);
 
 
-  var url = "https://hooks.slack.com/services/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";
+  var url = "https://hooks.slack.com/services/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";
   var text = function () {
     return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
   };
