@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //The array of victims
   var victims = ["Erick", "John", "Abdala", "Landy", "Manny"];
 
   //Create a new Date object
@@ -13,7 +14,7 @@ $(document).ready(function() {
   var pickRandom = function (){
     todaysVictim = victims[Math.floor(Math.random() * victims.length)];
     return todaysVictim;
-  };
+  };//CLOSE pickRandom
 
   var makeCoffee = function (person) {
     //Call the function
@@ -62,19 +63,21 @@ $(document).ready(function() {
       return todaysVictim;
     }
 
-
-  };
+  };//CLOSE makeCoffee
 
   //Call the function
-  makeCoffee(pickRandom);
+  // makeCoffee(pickRandom);
 
 
-  var url = "https://hooks.slack.com/services/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";
-  var text = "☕️ Time for " + todaysVictim + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+  var url = "https://hooks.slack.com/services/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";
+  var text = function () {
+    return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+  };
+
   var ajaxReq = function () {
       $.ajax({
           data: 'payload=' + JSON.stringify({
-              "text": text
+              "text": text()
           }),
           dataType: 'json',
           processData: false,
@@ -85,14 +88,15 @@ $(document).ready(function() {
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
+    //Call the AJAX and send :)
+    ajaxReq();
     //Update the h2 with the var
     $('h2').text(todaysVictim);
     //Add the animation and do it EVERY time the button is clicked
     $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
       $('h2').removeClass('tada');
     });
-    //Call the AJAX and send :)
-    ajaxReq();
   });
+
 
 });
