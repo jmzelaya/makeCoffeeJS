@@ -70,13 +70,19 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
+  var salty = "☕️ Time for Manny to make café. 👏🏽TATA TATATATA TATA👏🏽";
   var text = function () {
-    return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
-  };
+    //Old message:
+    // return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+    //New Special Message:
+    return "🥜 Time for Salty Nutz to make café. 🥜 Maaaaaaannnniiiiiiiii 🥜 ";
+  };//CLOSE text()
+
 
   var ajaxReq = function () {
       $.ajax({
           data: 'payload=' + JSON.stringify({
+              //Call the text function which will execute makeCoffee(pickRandom);
               "text": text()
           }),
           dataType: 'json',
@@ -84,7 +90,19 @@ $(document).ready(function() {
           type: 'POST',
           url: url
       });
-  };
+  };//CLOSE ajaxReq
+
+  var specReq = function () {
+      $.ajax({
+          data: 'payload=' + JSON.stringify({
+              "text": salty
+          }),
+          dataType: 'json',
+          processData: false,
+          type: 'POST',
+          url: url
+      });
+  };//CLOSE ajaxReq
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
@@ -96,7 +114,17 @@ $(document).ready(function() {
     $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
       $('h2').removeClass('tada');
     });
+  });//CLOSE ('.btn-pick').click()
+
+  $('#b-btn').click(function(){
+    //Call the AJAX and send :)
+    specReq();
+    //Update the h2 with the var
+    $('h2').text("Manny");
+    //Add the animation and do it EVERY time the button is clicked
+    $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
+      $('h2').removeClass('tada');
+    });
   });
 
-
-});
+}); //CLOSE document.ready()
