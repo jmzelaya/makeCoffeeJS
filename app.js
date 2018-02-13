@@ -73,9 +73,9 @@ $(document).ready(function() {
   var salty = "☕️ Time for Manny to make café. 👏🏽TATA TATATATA TATA👏🏽";
   var text = function () {
     //Old message:
-    // return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
+    return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
     //New Special Message:
-    return "🥜 Time for Salty Nutz to make café. 🥜 Maaaaaaannnniiiiiiiii 🥜 ";
+    // return "🥜 Time for Salty Nutz to make café. 🥜 Maaaaaaannnniiiiiiiii 🥜 ";
   };//CLOSE text()
 
 
