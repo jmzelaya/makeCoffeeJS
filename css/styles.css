@@ -63,12 +63,9 @@ body{
   font-size: 20px;
   border-width: 2px;
   color: slategrey;
+  cursor: pointer;
 }
 
 .wrapper button:hover{
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2)inset;
-}
-
-#b-btn{
-  opacity: 0;
 }

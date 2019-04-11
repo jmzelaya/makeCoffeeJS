@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //The array of victims
-  var victims = ["Erick", "John", "Abdala", "Landy", "Manny"];
+  var victims = ["Erick", "John", "Abdala", "Landy"];
 
   //Create a new Date object
   var date = new Date();
@@ -70,12 +70,9 @@ $(document).ready(function() {
 
 
   var url = "https://hooks.slack.com/services/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";
-  var salty = "☕️ Time for Manny to make café. 👏🏽TATA TATATATA TATA👏🏽";
   var text = function () {
     //Old message:
     return "☕️ Time for " + makeCoffee(pickRandom) + " to make café. 👏🏽TATA TATATATA TATA👏🏽";
-    //New Special Message:
-    // return "🥜 Time for Salty Nutz to make café. 🥜 Maaaaaaannnniiiiiiiii 🥜 ";
   };//CLOSE text()
 
 
@@ -92,17 +89,6 @@ $(document).ready(function() {
       });
   };//CLOSE ajaxReq
 
-  var specReq = function () {
-      $.ajax({
-          data: 'payload=' + JSON.stringify({
-              "text": salty
-          }),
-          dataType: 'json',
-          processData: false,
-          type: 'POST',
-          url: url
-      });
-  };//CLOSE ajaxReq
 
   //When the button gets clicked...
   $('.btn-pick').click(function(){
@@ -115,16 +101,5 @@ $(document).ready(function() {
       $('h2').removeClass('tada');
     });
   });//CLOSE ('.btn-pick').click()
-
-  $('#b-btn').click(function(){
-    //Call the AJAX and send :)
-    specReq();
-    //Update the h2 with the var
-    $('h2').text("Manny");
-    //Add the animation and do it EVERY time the button is clicked
-    $('h2').addClass('tada').one('animationend webkitAnimationEnd oAnimationEnd', function(){
-      $('h2').removeClass('tada');
-    });
-  });
 
 }); //CLOSE document.ready()
